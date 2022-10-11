@@ -1,0 +1,47 @@
+git config --global user.name "Dnyaneshwar Giri"
+git config --global user.email ""
+
+git commit -m 'first push'
+git push -u -f origin master
+
+git branch -vv
+git remote -v
+git log
+git branch (current branch)
+
+-------------push new branch to remote------------
+git checkout -b test-branch master
+git push --set-upstream origin test-branch
+
+------------fetch all new changes from remote----------
+git fetch --all
+git branch -r (to list all branches)
+
+------------delete remote branch--------------------
+git push -d origin test-branch
+
+------------delete local branch--------------------
+git branch -d test-branch
+
+-----------merge conflict-----------------------
+
+we should be checkout to branch in which we want to merge into
+master> git merge test-branch
+to abort merge-
+master> git merge --abort
+to merge
+accept current changes/ accept incoming changes/ accept both from vs code
+git add .
+git commit -m 'merged test-branch'
+git status
+git push
+
+------------pull requests------------------------
+
+---------revert back recent commit--------------
+get the hash of commit which you commited accedently(latest one)
+lets say it is 2f5451f
+git revert 2f5451f --no-edit
+git push
+---------undoing local commit-----------------
+git reset --soft HEAD~

@@ -1,0 +1,18 @@
+git checkout admin
+
+git pull
+
+git merge dev
+
+git push
+
+git merge <branch-name>
+
+resolve conflicts if any
+then git push
+
+check the code on admin branch by running it locally
+if every thing works fine
+
+create a pull request from admin to dev in code cloudf
+
